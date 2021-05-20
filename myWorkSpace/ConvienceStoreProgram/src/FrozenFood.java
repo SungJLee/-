@@ -11,5 +11,8 @@ public class FrozenFood  extends Eattings{
 		this.price[16] = 3000;
 		this.company[16] = "비비고";
 	}
-
+	public void PrintProduct() {
+		System.out.println(" 상품코드 : " + this.code[16] + " 상품명 : " + this.id[16] +  " 맛 : " + this.taste[16] + " 유통기한 : " + this.date[16] + " 가격 : " + this.price[16] + " 종류 : " + this.material[16] + " 회사명 : " + this.company );		
+		System.out.println();
+	}
 }

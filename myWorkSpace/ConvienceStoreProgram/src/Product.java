@@ -15,4 +15,5 @@ public class Product {
 	String company[] = new String[40];
 	
 
+	
 }

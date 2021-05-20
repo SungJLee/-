@@ -1,10 +1,7 @@
-import java.nio.charset.CoderMalfunctionError;
+
 
 public class Snack extends Eattings{
 
-	String material[] = new String[6]; 
-	
-	
 	public Snack() {	// 과자
 		this.code[1] = 1;
 		this.id[1] = "꼬북칩";
@@ -15,4 +12,8 @@ public class Snack extends Eattings{
 		this.material[1] = "봉지";
 	}
 
+	public void PrintProduct() {
+		System.out.println(" 상품코드 : " + this.code[1] + " 상품명 : " + this.id[1] +  " 맛 : " + this.taste[1] + " 유통기한 : " + this.date[1] + " 가격 : " + this.price[1] + " 종류 : " + this.material[1] );		
+		System.out.println();
+	}
 }

@@ -13,4 +13,9 @@ public class Drink extends Eattings{
 		this.size[6] = "200ml";
 		this.material[6] = "탄산";
 	}
+	
+	public void PrintProduct() {
+		System.out.println(" 상품코드 : " + this.code[6] + " 상품명 : " + this.id[6] +  " 맛 : " + this.taste[6] + " 유통기한 : " + this.date[6] + " 가격 : " + this.price[6] + " 용량 "+this.size[6] +  " 종류 : " + this.material[6]);
+		System.out.println();
+	}
 }

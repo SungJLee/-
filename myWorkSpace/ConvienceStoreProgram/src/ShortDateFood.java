@@ -9,4 +9,9 @@ public class ShortDateFood extends Eattings{
 		this.price[26] = 800;
 	
 	}
+	
+	public void PrintProduct() {
+		System.out.println(" 상품코드 : " + this.code[26] + " 상품명 : " + this.id[26] +  " 맛 : " + this.taste[26] + " 유통기한 : " + this.date[26] + " 가격 : " + this.price[26]);	
+		System.out.println();
+	}
 }
