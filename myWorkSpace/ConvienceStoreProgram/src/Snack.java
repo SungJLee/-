@@ -5,7 +5,7 @@ public class Snack extends Eattings{
 	String material[] = new String[6]; 
 	
 	
-	public void snack() {	// 과자
+	public Snack() {	// 과자
 		this.code[1] = 1;
 		this.id[1] = "꼬북칩";
 		this.date[1] = "6개월";

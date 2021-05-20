@@ -3,7 +3,7 @@
 public class NoEattings extends Product{
 
 	
-	public NoEattings() {	// 과자
+	public NoEattings() {	
 		this.code[31] = 31;
 		this.id[31] = "치약";
 		this.date[31] = "6개월";
