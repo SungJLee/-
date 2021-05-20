@@ -4,17 +4,24 @@ import java.util.*;
 public class Main {
   public static void main(String[] args) {
 		
-		boolean swi = true;
+		
 		boolean productChoiceSwi = true;
+		boolean swi = true;
 		boolean swi2 = true;
+		boolean swi3 = true;
+		Snack snack = new Snack();
+		Drink drink = new Drink();
+		Icecream icecream = new Icecream();
+		FrozenFood frozenFood = new FrozenFood();
+		Calculator calculator = new Calculator();
+		Ramen ramen = new Ramen();
+		ShortDateFood shortDateFood = new ShortDateFood();
 		while(swi){
 			System.out.println("1.상품들 보기");
-			System.out.println("2.");
-		    System.out.println("3.");
-		    System.out.println("4.");
-		    System.out.println("5.");
-		    System.out.println("6.");
-			System.out.println("7. ");
+			System.out.println("2.계산하기");
+		    System.out.println("3.버스카드충전");
+		    System.out.println("4.신상품 추가");
+			System.out.println("5. 나가기");
 			
       
 			Scanner scan = new Scanner(System.in); 
@@ -31,28 +38,28 @@ public class Main {
 							int productChoice = scan.nextInt();
 							switch (productChoice) {
 								case 1 :
-									Snack snack = new Snack();
-									snack.PrintProduct();
+									Snack snack2 = new Snack();
+									snack2.PrintProduct();
 									break;
 								case 2 :
-									Drink drink = new Drink();
+									Drink drink2 = new Drink();
 									drink.PrintProduct();
 									break;
 								case 3 :
-									Icecream icecream = new Icecream();
-									icecream.PrintProduct();
+									Icecream icecream2 = new Icecream();
+									icecream2.PrintProduct();
 									break;
 								case 4 :
-									Ramen ramen = new Ramen();
+									Ramen ramen2 = new Ramen();
 									ramen.PrintProduct();
 									break;
 								case 5 :
-									ShortDateFood shortDateFood = new ShortDateFood();
+									ShortDateFood shortDateFood2 = new ShortDateFood();
 									shortDateFood.PrintProduct();
 									break;
 								case 6 :
-									NoEattings noEattings = new NoEattings();
-									noEattings.PrintProduct();
+									NoEattings noEattings2 = new NoEattings();
+									noEattings2.PrintProduct();
 									break;
 								case 7:
 									System.out.println("메인화면으로 넘어갑니다.");
@@ -66,7 +73,71 @@ public class Main {
 						
 	
 					case 2: 
-						break;
+						while(swi3){
+							
+					//		System.out.println("원하시는 제품을 선택해 주세요.");
+							System.out.println("1." + snack.id[1]);
+							System.out.println("2." + drink.id[6]);
+							System.out.println("3." + icecream.id[11]);
+							System.out.println("4." + frozenFood.id[16]);
+							System.out.println("5." + ramen.id[21]);
+							System.out.println("6." + shortDateFood.id[26]);
+							System.out.println("7. 나가기"  );
+							
+							Scanner scan2 = new Scanner(System.in); 
+							System.out.print("> ");
+							int choice2 = scan2.nextInt();
+							
+								switch(choice2){
+								case 1: calculator.getItems1();
+								
+								System.out.print("구입할 갯수:  ");
+							      int A = scan.nextInt(); 
+							      System.out.println(calculator.A * A + " 원입니다.");
+							      break;
+							    
+								case 2: calculator.getItems2();
+								  System.out.print("구입할 갯수:  ");
+							      int B = scan.nextInt(); 
+							      System.out.println(calculator.A * B + " 원입니다.");
+							      break;
+							    
+								case 3: calculator.getItems3();
+								  System.out.print("구입할 갯수:  ");
+							      int C = scan.nextInt(); 
+							      System.out.println(calculator.A * C + " 원입니다.");
+							      break;
+							    
+								case 4: calculator.getItems4();
+								  System.out.print("구입할 갯수:  ");
+							      int D = scan.nextInt(); 
+							      System.out.println(calculator.A * D + " 원입니다.");
+							      break;
+							    
+								case 5: calculator.getItems5();
+								  System.out.print("구입할 갯수:  ");
+							      int E = scan.nextInt(); 
+							      System.out.println(calculator.A * E + " 원입니다.");
+							      break;
+							    
+								case 6: calculator.getItems6();
+								
+								  System.out.print("구입할 갯수:  ");
+							      int F = scan.nextInt(); 
+							      System.out.println(calculator.A * F + " 원입니다.");
+							      break;
+							    
+								case 7 : 
+								  System.out.println("메인으로 돌아갑니다.");
+								  System.out.println("");
+								  swi3 = false;
+								
+								default :
+								  System.out.println("잘못 입력 했습니다.");
+								  break;
+								}
+							}
+					break;
 	
 					case 3: 
 						Bus bs = new Bus();
@@ -101,17 +172,14 @@ public class Main {
 						break;
 	
 					case 5 : 
+						swi = false;
 						break;
 	
-					case 6 : 
+						
+					
+					default :
+						System.out.println("잘못 입력하셨습니다.");
 						break;
-
-        case 7 : // 
-					swi = false;
-				break;
-				default :
-					System.out.println("�߸� �Է��ϼ̽��ϴ�.");
-				break;
 			}
     }
   }
